@@ -1,6 +1,6 @@
 import json
 
-from src.application.service.iniciar_processamento_service import IniciarProcessamentoService
+from application.service.iniciar_processamento_service import IniciarProcessamentoService
 
 iniciar_processamento_service = IniciarProcessamentoService()
 

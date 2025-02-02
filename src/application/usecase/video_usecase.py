@@ -1,7 +1,7 @@
 from datetime import datetime
 
-from src.domain.entitites.video import Video
-from src.infraestructure.video_repository_impl import VideoRepositoryImpl
+from domain.entitites.video import Video
+from infraestructure.repositories.VideoRepositoryImpl import VideoRepositoryImpl
 
 
 class VideoUsecase:

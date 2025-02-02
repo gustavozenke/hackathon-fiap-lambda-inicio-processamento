@@ -1,6 +1,6 @@
-from src.application.usecase.bucket_usecase import BucketUsecase
-from src.application.usecase.sqs_usecase import SqsUsecase
-from src.application.usecase.video_usecase import VideoUsecase
+from application.usecase.bucket_usecase import BucketUsecase
+from application.usecase.sqs_usecase import SqsUsecase
+from application.usecase.video_usecase import VideoUsecase
 
 
 class IniciarProcessamentoService:
