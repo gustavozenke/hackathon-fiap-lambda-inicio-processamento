@@ -1,11 +1,9 @@
-from application.usecase.bucket_usecase import BucketUsecase
 from application.usecase.sqs_usecase import SqsUsecase
 from application.usecase.video_usecase import VideoUsecase
 
 
 class IniciarProcessamentoService:
     def __init__(self):
-        self.bucket_usecase = BucketUsecase()
         self.video_usecase = VideoUsecase()
         self.sqs_usecase = SqsUsecase()
 
