@@ -7,7 +7,7 @@ class SqsUsecase:
 
     def __init__(self):
         self.sqs_client = boto3.client('sqs')
-        self.queue_url = ""
+        self.queue_url = "https://sqs.us-east-1.amazonaws.com/369780787289/sqs-processamento"
 
     def send(self, nome_arquivo, nome_usuario):
         message = {
