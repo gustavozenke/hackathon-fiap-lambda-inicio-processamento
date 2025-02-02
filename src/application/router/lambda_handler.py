@@ -7,9 +7,9 @@ iniciar_processamento_service = IniciarProcessamentoService()
 
 def lambda_handler(event, context):
     body = json.loads(event['Records'][0]['body'])
-    nome_arquivo = body['Records'][0]['s3']['object']['key']
+    nome_video = body['Records'][0]['s3']['object']['key']
     tamanho = body['Records'][0]['s3']['object']['size']
-    result = iniciar_processamento_service.iniciar_processamento(nome_arquivo, tamanho)
+    result = iniciar_processamento_service.iniciar_processamento(nome_video, tamanho)
     return {'statusCode': 200, 'body': json.dumps(result)}
 
 
