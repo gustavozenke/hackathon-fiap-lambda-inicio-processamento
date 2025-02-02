@@ -1,9 +1,10 @@
 import boto3
 
 from domain.entitites.video import Video
+from domain.interfaces.VideoRepository import VideoRepository
 
 
-class VideoRepositoryImpl:
+class VideoRepositoryImpl(VideoRepository):
 
     def __init__(self):
         self.dynamodb = boto3.resource('dynamodb')
