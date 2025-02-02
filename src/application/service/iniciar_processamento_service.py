@@ -9,8 +9,8 @@ class IniciarProcessamentoService:
         self.video_usecase = VideoUsecase()
         self.sqs_usecase = SqsUsecase()
 
-    def iniciar_processamento(self, nome_arquivo):
-        response = self.bucket_usecase.buscar_metadados_video(nome_arquivo)
-        print(response)
-        self.video_usecase.gravar_metadados_video(nome_arquivo)
-        self.sqs_usecase.send("message")
+    def iniciar_processamento(self, nome_arquivo, tamanho):
+        nome_usuario = nome_arquivo.split('-')[0]
+        formato = nome_arquivo.split('.')[1]
+        self.video_usecase.gravar_metadados_video(nome_arquivo, nome_usuario, formato, tamanho)
+        self.sqs_usecase.send(nome_arquivo, nome_usuario)

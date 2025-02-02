@@ -7,7 +7,7 @@ class VideoRepositoryImpl:
 
     def __init__(self):
         self.dynamodb = boto3.resource('dynamodb')
-        self.table = self.dynamodb.Table('status_processamento')
+        self.table = self.dynamodb.Table('videos')
 
     def gravar_metadados_video(self, video: Video) -> None:
         self.table.put_item(
