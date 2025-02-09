@@ -3,7 +3,7 @@ from abc import abstractmethod, ABC
 from domain.entitites.video import Video
 
 
-class VideoRepository(ABC):
+class EnvioProcessamento(ABC):
     @abstractmethod
-    def gravar_metadados_video(self, video: Video) -> None:
+    def iniciar_processamento(self, video: Video):
         pass
