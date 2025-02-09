@@ -16,6 +16,7 @@ resource "aws_lambda_function" "this" {
 
   environment {
     variables = {
+      QUEUE_PROCESSAMENTO_URL = var.queue_url
       env = "prod"
     }
   }
