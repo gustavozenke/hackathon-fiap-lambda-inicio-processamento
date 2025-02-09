@@ -2,8 +2,10 @@ import json
 
 import boto3
 
+from domain.interfaces.sqs_repository import SqsRepository
 
-class SqsUsecase:
+
+class SqsRepositoryImpl(SqsRepository):
 
     def __init__(self):
         self.sqs_client = boto3.client('sqs')
