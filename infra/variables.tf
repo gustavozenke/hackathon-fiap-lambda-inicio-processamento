@@ -22,3 +22,8 @@ variable "timeout" {
   type        = number
   default     = 60
 }
+
+variable "queue_url" {
+  type        = string
+  default     = "https://sqs.us-east-1.amazonaws.com/369780787289/sqs-processamento"
+}
