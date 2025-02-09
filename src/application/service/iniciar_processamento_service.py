@@ -8,7 +8,7 @@ from domain.interfaces.envio_processamento import EnvioProcessamento
 from domain.interfaces.iniciar_processamento import IniciarProcessamento
 from domain.interfaces.gravar_video import GravarVideo
 
-logging.basicConfig(level=logging.INFO)
+logging.getLogger().setLevel(logging.INFO)
 logger = logging.getLogger(__name__)
 
 tz_br = pytz.timezone("America/Sao_Paulo")

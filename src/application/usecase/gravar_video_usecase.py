@@ -4,7 +4,7 @@ from domain.entitites.video import Video
 from domain.interfaces.video_repository import VideoRepository
 from domain.interfaces.gravar_video import GravarVideo
 
-logging.basicConfig(level=logging.INFO)
+logging.getLogger().setLevel(logging.INFO)
 logger = logging.getLogger(__name__)
 
 
