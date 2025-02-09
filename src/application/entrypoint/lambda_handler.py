@@ -7,7 +7,7 @@ from infraestructure.repositories.sqs_repositrory import SqsRepositoryImpl
 from application.usecase.gravar_video_usecase import GravarVideoUseCase
 from infraestructure.repositories.Video_repository_impl import VideoRepositoryImpl
 
-logging.basicConfig(level=logging.INFO)
+logging.getLogger().setLevel(logging.INFO)
 logger = logging.getLogger(__name__)
 
 

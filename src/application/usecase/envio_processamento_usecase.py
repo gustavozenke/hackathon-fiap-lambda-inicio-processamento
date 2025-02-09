@@ -5,7 +5,7 @@ from domain.entitites.video import Video
 from domain.interfaces.envio_processamento import EnvioProcessamento
 from domain.interfaces.sqs_repository import SqsRepository
 
-logging.basicConfig(level=logging.INFO)
+logging.getLogger().setLevel(logging.INFO)
 logger = logging.getLogger(__name__)
 
 
